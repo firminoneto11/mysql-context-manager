@@ -22,5 +22,31 @@ Once more, make sure that your Python version is supported by the MySQL database
 ```powershell
 pip install mysql-connector-python
 ```
+
+If you encounter any errors when importing the 'mysql.connector' in the source code editor, open up your MySQL installer and also install their version of Python connector.
 </p>
 <hr/>
+<!--Usage-->
+<div align='center'>
+<h3>🤔 How should i use it? 🤔</h3>
+</div>
+<p>The usage of this context manager is pretty simple and it works as any other function or class designed to work on a conext manager.Look at the example bellow:<br/>
+
+```python
+
+# Create a dictionary with your database info
+database_info = {
+    'hostname': 'localhost',
+    'username': 'firmino',
+    'password': 'neto123',
+    'database': 'valware_database'
+}
+
+# Creating the cursor in the context manager
+with OpenDB(**database_info) as cursor:
+    # Execute your queries/actions here
+    cursor.execute('Any SQL command')
+
+# Now when the code reaches out of the context manager, if it encounters any erros it will rollback all the changes, else it will commit the changes and close the cursor and connection!
+```
+</p>

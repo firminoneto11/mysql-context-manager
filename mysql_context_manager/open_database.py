@@ -68,3 +68,17 @@ class OpenDB:
 
         # Closing the connection.
         self.connection.close()
+
+
+if __name__ == '__main__':
+    db_info = {
+        'hostname': 'localhost',
+        'username': 'firmino',
+        'password': 'neto123',
+        'database': 'valware_database'
+    }
+
+    with OpenDB(**db_info) as cursor:
+        cursor.execute('SELECT * FROM pessoas')
+        for pessoa in cursor:
+            print(pessoa)
