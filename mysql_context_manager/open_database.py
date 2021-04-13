@@ -72,13 +72,13 @@ class OpenDB:
 
 if __name__ == '__main__':
     db_info = {
-        'hostname': 'localhost',
-        'username': 'firmino',
-        'password': 'neto123',
+        'host': 'localhost',
+        'user': 'firmino',
+        'passwd': 'neto123',
         'database': 'valware_database'
     }
 
     with OpenDB(**db_info) as cursor:
-        cursor.execute('SELECT * FROM pessoas')
+        cursor.execute('SELECT * FROM pessoa')
         for pessoa in cursor:
             print(pessoa)

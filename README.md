@@ -36,17 +36,28 @@ If you encounter any errors when importing the 'mysql.connector' in the source c
 
 # Create a dictionary with your database info
 database_info = {
-    'hostname': 'localhost',
-    'username': 'firmino',
-    'password': 'neto123',
-    'database': 'valware_database'
+    'host': 'host name',
+    'user': 'user name',
+    'passwd': 'password',
+    'database': 'database name'
 }
 
-# Creating the cursor in the context manager
+# Creating the cursor in the context manager. You can
+# also unpack all the values from the dictionary and
+# pass them as arguments for the class
 with OpenDB(**database_info) as cursor:
     # Execute your queries/actions here
     cursor.execute('Any SQL command')
 
-# Now when the code reaches out of the context manager, if it encounters any erros it will rollback all the changes, else it will commit the changes and close the cursor and connection!
+# Now when the code reaches out of the context manager, 
+# if it encounters any erros it will rollback all the 
+# changes, else it will commit the changes and close 
+# the cursor and connection!
 ```
 </p>
+<hr/>
+<!--Author-->
+<div align='center'>
+<h3>👾 Author 👾</h3>
+</div>
+<p>Made with ❤ by <a href='https://github.com/firminoneto11'>Firmino Neto</a>.</p>
