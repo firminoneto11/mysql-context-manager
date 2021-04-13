@@ -70,15 +70,14 @@ class OpenDB:
         self.connection.close()
 
 
+# Standard usage
 if __name__ == '__main__':
     db_info = {
-        'host': 'localhost',
-        'user': 'firmino',
-        'passwd': 'neto123',
-        'database': 'valware_database'
+        'host': 'insert here your host name',
+        'user': 'insert here your mysql server user name',
+        'passwd': 'insert here your mysql server password',
+        'database': 'insert here your database name that you want to use'
     }
 
     with OpenDB(**db_info) as cursor:
-        cursor.execute('SELECT * FROM pessoa')
-        for pessoa in cursor:
-            print(pessoa)
+        cursor.execute('Any SQL command')

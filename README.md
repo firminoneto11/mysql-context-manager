@@ -1,3 +1,8 @@
+![GitHub top language](https://img.shields.io/github/languages/top/firminoneto11/mysql-context-manager?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/firminoneto11/mysql-context-manager?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/firminoneto11/mysql-context-manager?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/firminoneto11/mysql-context-manager?style=for-the-badge)
+<hr/>
 <h1>mysql-context-manager</h1>
 <h2>A class designed to work as a context manager to connect to a MySQL database and create a cursor.</h2>
 <hr/>
@@ -5,13 +10,13 @@
 <div align='center'>
 <h3>👻 Why did you made this context manager? 👻</h3>
 </div>
-<p>When connecting to the MySQL database, often we have to create a connection, create a cursor, execute the queries and then close the cursor and connection. This process can be automated and simplified with via context manager. Also, sometimes, we can forget to close the connections and that can lead to a major bug. So, with all of these things, i did some research and foud that the 'magic methods' could help in the design of the class that will work as context manager.</p>
+<p>When connecting to the MySQL database, often we have to create a connection, create a cursor, execute the queries and then close the cursor and connection. This process can be automated and simplified via context manager. Also, sometimes, we can forget to close the connections and that can lead to a major bug. So, with all of these things, i did some research and found that the 'magic methods' could help in the design of the class that will work as a context manager.</p>
 <hr/>
 <!--Requirements-->
 <div align='center'>
 <h3>🤔 How can i use it? 🤔</h3>
 </div>
-<p>Untill the day i developed the code, there wasn't a MySQL connector for Python 3.9+ versions, so this context manager should work only for the MySQL supported Python versions. In my case, i used the 3.8.9 Python version.<br/>
+<p>Until the day i developed this code, there wasn't a MySQL connector for Python 3.9+ versions, so this context manager should work only for the MySQL supported Python versions. In my case, i used the 3.8.9 Python version.<br/>
 So the requirements are:
 
 - [x] Supported Python version by MySQL database. I used 3.8.9, but check your MySQL installer
@@ -30,7 +35,7 @@ If you encounter any errors when importing the 'mysql.connector' in the source c
 <div align='center'>
 <h3>🤔 How should i use it? 🤔</h3>
 </div>
-<p>The usage of this context manager is pretty simple and it works as any other function or class designed to work on a conext manager.Look at the example bellow:<br/>
+<p>The usage of this context manager is pretty simple and it works as any other function or class designed to work on a conext manager. Look at the example bellow:<br/>
 
 ```python
 
